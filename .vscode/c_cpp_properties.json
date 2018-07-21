@@ -1,31 +1,29 @@
 {
-  "configurations": [
-    {
-      "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "path": [
-          "${workspaceFolder}"
-        ]
-      },
-      "cStandard": "c99",
-      "compilerPath": "\"/usr/bin/g++-8 -march=native\"",
-      "cppStandard": "c++17",
-      "defines": [],
-      "includePath": [
-        "${workspaceFolder}/**",
-        "/usr/local/include",
-        "/usr/include",
-        "/usr/include/c++/8",
-        "/usr/include/c++/8/backward",
-        "/usr/include/x86_64-linux-gnu",
-        "/usr/include/x86_64-linux-gnu/c++/8",
-        "/usr/lib/gcc/x86_64-linux-gnu/8/include",
-        "/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"
-      ],
-      "intelliSenseMode": "${default}",
-      "name": "Linux"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "${workspaceFolder}"
+                ]
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "defines": [],
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/c++/8.1.1",
+                "/usr/include/c++/8.1.1/x86_64-pc-linux-gnu",
+                "/usr/include/c++/8.1.1/backward",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.1/include",
+                "/usr/local/include",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.1/include-fixed",
+                "/usr/include"
+            ],
+            "intelliSenseMode": "${default}",
+            "name": "Linux",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
 }
-

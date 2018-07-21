@@ -119,8 +119,8 @@
 
 static inline uint64_t __i_xgetbv(uint32_t index)
 {
-#if _MSC_VER >= 1600 || (defined(_XSAVEINTRIN_H_INCLUDED) && defined(__XSAVE__))  // -mxsave
-// if you use gcc 8 and meet a segment fault here, please see the gcc bug: https://gcc.gnu.org/bugzilla/show_bug.cgi?format=multiple&id=85684
+#if _MSC_VER >= 1600 || (__GNUC__ > 8 && defined(_XSAVEINTRIN_H_INCLUDED) && defined(__XSAVE__))  // -mxsave
+// gcc 8 built in _xgetbv() doesn't return a correct result, please see the gcc bug: https://gcc.gnu.org/bugzilla/show_bug.cgi?format=multiple&id=85684
 #    pragma message("use compiler builtin _xgetbv")
     return _xgetbv(index);
 #else
@@ -260,6 +260,7 @@ bool CPUID::SHA()
 {
     return id.f_7_EBX_ & bit_SHA;
 }
-bool CPUID::AES() {
+bool CPUID::AES()
+{
     return id.f_1_ECX_ & bit_AES;
 }

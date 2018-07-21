@@ -10,3 +10,4 @@ CTestTestfile.cmake
 .cproject
 .project
 .settings/
+build/
