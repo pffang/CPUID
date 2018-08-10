@@ -12,17 +12,18 @@
             "defines": [],
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/c++/8.1.1",
-                "/usr/include/c++/8.1.1/x86_64-pc-linux-gnu",
-                "/usr/include/c++/8.1.1/backward",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.1/include",
+                "/usr/include/c++/8.2.0",
+                "/usr/include/c++/8.2.0/x86_64-pc-linux-gnu",
+                "/usr/include/c++/8.2.0/backward",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include",
                 "/usr/local/include",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.1/include-fixed",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed",
                 "/usr/include"
             ],
             "intelliSenseMode": "${default}",
             "name": "Linux",
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         }
     ],
     "version": 4

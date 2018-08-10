@@ -119,7 +119,7 @@
 
 static inline uint64_t __i_xgetbv(uint32_t index)
 {
-#if _MSC_VER >= 1600 || (__GNUC__ > 8 && defined(_XSAVEINTRIN_H_INCLUDED) && defined(__XSAVE__))  // -mxsave
+#if _MSC_VER >= 1600 || (__GNUC__ >= 8 && __GNUC_MINOR__ >= 2 && defined(_XSAVEINTRIN_H_INCLUDED) && defined(__XSAVE__))  // -mxsave
 // gcc 8 built in _xgetbv() doesn't return a correct result, please see the gcc bug: https://gcc.gnu.org/bugzilla/show_bug.cgi?format=multiple&id=85684
 #    pragma message("use compiler builtin _xgetbv")
     return _xgetbv(index);
